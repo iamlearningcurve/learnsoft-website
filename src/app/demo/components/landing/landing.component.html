@@ -319,16 +319,16 @@
                         <span class="text-900 text-xl font-medium block" style="color: #522888 !important;">Company</span>
                         <ul class="list-none p-0">
                             <li>
-                                <a tabindex="0" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">About</a>
+                                <a tabindex="0" (click)="scrollToAnchor('about-us', 100); this.tab = 1" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">About</a>
                             </li>
                             <li>
                                 <a tabindex="0" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">FAQ</a>
                             </li>
                             <li>
-                                <a tabindex="0" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">Careers</a>
+                                <a tabindex="0" (click)="scrollToAnchor('careers', 100); this.tab = 3" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">Careers</a>
                             </li>
                             <li>
-                                <a tabindex="0" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">Services</a>
+                                <a tabindex="0" (click)="scrollToAnchor('services', 100); this.tab = 4" class="text-600 hover:text-yellow-700 transition-duration-150 cursor-pointer mt-3 block">Services</a>
                             </li>
                         </ul>
                     </div>
