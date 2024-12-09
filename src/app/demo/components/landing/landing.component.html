@@ -38,7 +38,7 @@
                         </li>
                     </ul>
                     <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-                        <button pButton pRipple label="Contact Us" style="background-color: #522888 !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="scrollToAnchor('contact', 100);"></button>
+                        <button pButton pRipple label="Contact Us" style="background-color: #522888 !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="scrollToAnchor('contact', 100)"></button>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                     <div class="text-6xl text-primary font-bold mb-3" style="color: #522888 !important;">with Engaging, Interactive Learning</div>
                     <p class="mt-0 mb-4 text-900 text-xl line-height-3" style="color: #B97F24 !important;">Transform the way you learn with personalized courses designed for your success. From skill-building to career advancement, we empower you every step of the way.</p>
                     
-                    <button pButton pRipple label="Explore Courses" type="button" class="mr-3 p-button-raised" style="background-color: #522888 !important;"></button>
+                    <button pButton pRipple label="Explore Courses" type="button" class="mr-3 p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('portfolio', 100); this.tab = 2"></button>
                 </section>
             </div>
             <div class="col-12 md:col-6 overflow-hidden">
@@ -184,7 +184,7 @@
                                     <span class="text-gray-400 font-bold text-2xl" style="color: #522888 !important;">Collaborative Culture</span>
                                     <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">Join a supportive, team-oriented workplace where your ideas are valued.</div>
                                 </div>
-                                <button pButton pRipple label="Contact Us" type="button" class="p-button-raised" style="background-color: #522888 !important;"></button>
+                                <button pButton pRipple label="Contact Us" type="button" class="p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('contact', 100)"></button>
 
                                 
                             </div>
