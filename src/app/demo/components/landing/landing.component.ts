@@ -5,7 +5,8 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 
 @Component({
     selector: 'app-landing',
-    templateUrl: './landing.component.html'
+    templateUrl: './landing.component.html',
+    styleUrl: './landing.component.scss'
 })
 export class LandingComponent implements OnInit{
     currentYear: string;
@@ -16,12 +17,27 @@ export class LandingComponent implements OnInit{
     phoneNumber!: FormControl;
     enquireForm!: FormGroup;
     disableForm = false;
+    tabNumber = 0;
+    catagory = 0; // 0 - Project Management, 1 - Six Sigma, 2 - Business Analysis, 3 - Design Thinking
+    slideIndex = 1;
+    visibleCourse = false;
+    visibleCert = false;
+    visibleWorkshop = false;
     constructor(public layoutService: LayoutService, public router: Router) { 
         this.currentYear = new Date().getFullYear().toString();
     }
 
     ngOnInit(): void {
         this.createForm();
+        this.showSlides(this.slideIndex)
+
+        setInterval(() => {
+          this.slideIndex = this.slideIndex + 1;
+          if (this.slideIndex >= 4) {
+            this.slideIndex = 1
+          }
+          this.showSlides(this.slideIndex)
+        }, 4000)
     }
  
     scrollToAnchor(location: string, wait: number): void {
@@ -44,6 +60,16 @@ export class LandingComponent implements OnInit{
           phoneNumber: this.phoneNumber,
           message: this.message,
         });
+      }
+
+      showSlides(n) {
+        let i;
+        let dots = document.getElementsByClassName("dot");
+       
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[this.slideIndex-1].className += " active";
       }
 
       submitForm() {

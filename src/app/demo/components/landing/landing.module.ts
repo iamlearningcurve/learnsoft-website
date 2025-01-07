@@ -13,6 +13,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TabViewModule } from 'primeng/tabview';
+import { DialogModule } from 'primeng/dialog';
+import { TagModule } from 'primeng/tag';
+import { ChipModule } from 'primeng/chip';
 
 
 @NgModule({
@@ -29,7 +33,11 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
         FormsModule, ReactiveFormsModule,
         InputTextModule,
         InputMaskModule,
-        InputTextareaModule
+        InputTextareaModule,
+        TabViewModule,
+        DialogModule,
+        TagModule,
+        ChipModule
     ],
     declarations: [LandingComponent]
 })

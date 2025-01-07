@@ -1,0 +1,75 @@
+.responsive-tab-view .p-tabview-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    li {
+      flex: 0 0 auto;
+    }
+  }
+
+.responsive {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+  }
+
+  :host ::ng-deep p-tabview .p-tabview .p-tabview-panels {
+    display: none;
+  }
+
+  .selected-entry {
+    background-color: #522888 !important;
+    border-color: #B97F24 !important;
+    color: white !important;
+    border-width: 2px;
+  }
+
+  .disabled-entry {
+    border-color: #B97F24 !important;
+    color: #522888 !important;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  .break:before {
+    content:"\A";
+    white-space:pre;
+}
+
+.csf {
+    filter: grayscale(100%)
+}
+
+.custom-image-position {
+    position: absolute;
+    left: 370px;
+    top: 465px;
+}

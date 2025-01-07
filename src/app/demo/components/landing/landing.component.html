@@ -36,6 +36,11 @@
                                 <span>Services</span>
                             </a>
                         </li>
+                        <li>
+                            <a (click)="scrollToAnchor('trainers', 100); this.tab = 5" pRipple [class]="tab === 5 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                                <span>Trainers</span>
+                            </a>
+                        </li>
                     </ul>
                     <div class="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
                         <button pButton pRipple label="Contact Us" style="background-color: #522888 !important; color: white !important" class="p-button border-none ml-5 font-light line-height-2 bg-blue-500 text-white" (click)="scrollToAnchor('contact', 100)"></button>
@@ -58,11 +63,24 @@
         <div class="grid grid-nogutter text-800" style="background-color: #D6D5C9;" id="home">
             <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
                 <section>
-                    <span class="block text-6xl font-bold mb-1" style="color: #522888 !important;">Unlock Your Potential</span>
-                    <div class="text-6xl text-primary font-bold mb-3" style="color: #522888 !important;">with Engaging, Interactive Learning</div>
-                    <p class="mt-0 mb-4 text-900 text-xl line-height-3" style="color: #B97F24 !important;">Transform the way you learn with personalized courses designed for your success. From skill-building to career advancement, we empower you every step of the way.</p>
+                    <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 1">{{'Unlock Your Potential'}}</span>
+                    <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 1">{{'with Engaging, Interactive Learning'}}</div>
+                    <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 1">Transform the way you learn with personalized courses designed for your success. From skill-building to career advancement, we empower you every step of the way.</p>
                     
-                    <button pButton pRipple label="Explore Courses" type="button" class="mr-3 p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('portfolio', 100); this.tab = 2"></button>
+                    <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 2">{{'Empower Your Career'}}</span>
+                    <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 2">{{'with Learnsoft & KnowledgeWare'}}</div> <img *ngIf="slideIndex === 2" class="custom-image-position" src="assets/demo/images/landing/knowledgeware-logo.png"  height="100">
+                    <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 2">Earn Project Management, Six Sigma, and Business Analysis certifications through our exclusive partnership with KnowledgeWare. Gain the skills and credentials to boost your career.</p>
+
+                    <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 3">{{'Elevate Your Skills'}}</span>
+                    <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 3">{{'with Expert-Led & Professional Certifications'}}</div>
+                    <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 3">Unlock your potential through Project Management, Six Sigma, and Business Analysis certifications, with hands-on training from PMI/PMP-certified professionals, designed for real-world impact.</p>
+
+                    <button pButton pRipple label="Explore Courses" type="button" class="mr-3 p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('services', 100); this.tab = 2"></button>
+                    <div style="text-align:center" class="justify-content-end">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                      </div>
                 </section>
             </div>
             <div class="col-12 md:col-6 overflow-hidden">
@@ -103,6 +121,46 @@
                     </div>
                 </div>
                 
+                <div class="surface-card shadow-2 border-round p-5" style="background: radial-gradient(69.84% 69.84% at 50% 100%, rgba(82, 40, 136, 0.15) 0%, rgba(255, 255, 255, 0) 100%);">
+                    <div class="grid">
+                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center sm:border-right-1 border-bottom-1 lg:border-bottom-none surface-border cursor-pointer">
+                            <div class="flex align-items-center mr-3">
+                                
+                            </div>
+                            <div>
+                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">PMI Certified</span>
+                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Instructors</p>
+                            </div>
+                        </div>
+                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center lg:border-right-1 border-bottom-1 lg:border-bottom-none surface-border cursor-pointer">
+                            <div class="flex align-items-center mr-3">
+                                
+                            </div>
+                            <div>
+                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">Real-World</span>
+                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Project Management Experience</p>
+                            </div>
+                        </div>
+                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center sm:border-right-1 border-bottom-1 sm:border-bottom-none surface-border cursor-pointer">
+                            <div class="flex align-items-center mr-3">
+                                
+                            </div>
+                            <div>
+                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">PMP®, Agile, Scrum</span>
+                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Frameworks</p>
+                            </div>
+                        </div>
+                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center cursor-pointer">
+                            <div class="flex align-items-center mr-3">
+                                
+                            </div>
+                            <div>
+                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">Individual & Corporate</span>
+                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Trainings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="parallax">
@@ -123,7 +181,7 @@
                                 <div class="flex flex-column align-items-center justify-content-between">
                                     <div class="flex flex-row">
                                         <!-- <span class="text-3xl text-900 font-bold">40K</span> -->
-                                        <p class="mt-1 mb-0 text-600 text-xl">E-Learning for Individuals</p>
+                                        <p class="mt-1 mb-0 text-600 text-xl">Training for Individuals</p>
                                     </div>
                                     <div>
                                         <img src="assets/demo/images/landing/stats-illustration-4.svg">
@@ -198,7 +256,7 @@
         </div>
 
         <div class="px-4 py-8 md:px-6 lg:px-8" style="background: radial-gradient(69.84% 69.84% at 50% 100%, rgba(82, 40, 136, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" id="services">
-            <div class="text-900 text-3xl font-bold mb-3" style="color: #522888 !important;">Our Services</div>
+            <div class="text-900 text-5xl font-bold mb-3" style="color: #522888 !important;">Our Services</div>
             <div class="text-700 text-xl" style="color: #B97F24 !important;">Empowering success through e-learning solutions.</div>
             <div class="grid mt-7">
                 <div class="col-12 md:col-4">
@@ -208,7 +266,28 @@
                         </div>
                         <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Certification Programs</div>
                         <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Boost your credentials and stand out in the job market with Learn Soft's industry-recognized certifications. Our courses in IT, project management, marketing, and more provide real-world knowledge and hands-on experience trusted by employers.</div>
-                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component">
+                       
+                        <div class="flex flex-row justify-content-center flex-wrap gap-2">
+                            <!-- <p-tag severity="warn" value="Project Management" /><p-tag severity="warn" value="Six Sigma" /><p-tag severity="warn" value="Business Analysis" /><p-tag severity="warn" value="Design Thinking" /> -->
+                            
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Business Analysis</span>
+                            </span>
+                            <!-- <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Business Analysis</span>
+                            </span> -->
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Design Thinking</span>
+                            </span>
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Project Management</span>
+                            </span>
+                        </div>
+                         <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component mt-2" (click)="visibleCert = true">
                             <span class="p-button-label" style="color: #522888 !important;">Learn More</span>
                             <span class="p-ink"></span>
                         </button>
@@ -219,9 +298,28 @@
                         <div class="border-circle bg-purple-50 p-4 text-yellow-700 inline-flex justify-content-center align-items-center mb-4">
                             <i class="pi pi-book text-5xl"></i>
                         </div>
-                        <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Online Courses for Individuals</div>
-                        <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Unlock a world of learning with Learn Soft's diverse online courses, from coding and data science to personal development and leadership. Learn at your own pace with flexible options, interactive content, and expert instructors guiding you every step of the way.</div>
-                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component">
+                        <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Training for Individuals & Corporates</div>
+                        <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Unlock your potential with personalized training designed to equip you with the skills and knowledge to excel in your career. From PMP to Six Sigma, gain industry-recognized certifications that will empower you to lead, innovate, and thrive in your professional journey.</div>
+                        <div class="flex flex-row justify-content-center flex-wrap gap-2">
+                            <!-- <p-tag severity="warn" value="Project Management" /><p-tag severity="warn" value="Six Sigma" /><p-tag severity="warn" value="Business Analysis" /><p-tag severity="warn" value="Design Thinking" /> -->
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">PMI-PMP Training</span>
+                            </span>
+                            <!-- <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">PMI</span>
+                            </span> -->
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">CAPM Training</span>
+                            </span>
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600 mt-2" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Six Sigma Training</span>
+                            </span>
+                        </div>
+                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component" (click)="visibleCourse = true">
                             <span class="p-button-label" style="color: #522888 !important;">Learn More</span>
                             <span class="p-ink"></span>
                         </button>
@@ -234,7 +332,24 @@
                         </div>
                         <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Live Webinars & Workshops</div>
                         <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Learn Soft offers live, instructor-led webinars and workshops covering specific topics and trends. Engage with industry experts, ask questions, and gain actionable insights in real time. Enhance your learning and stay ahead with up-to-date, expert-led sessions.</div>
-                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component">
+                        <div class="flex flex-row justify-content-center flex-wrap gap-2">
+                            <!-- <p-tag severity="warn" value="Project Management" /><p-tag severity="warn" value="Six Sigma" /><p-tag severity="warn" value="Business Analysis" /><p-tag severity="warn" value="Design Thinking" /> -->
+                            
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Entrepreneurship</span>
+                            </span>
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Leadership</span>
+                            </span>
+                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
+                                <i class="pi pi-check text-purple-800 mr-2"></i>
+                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Digital Transformation</span>
+                            </span>
+                            
+                        </div>
+                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component" (click)="visibleWorkshop = true">
                             <span class="p-button-label" style="color: #522888 !important;">Learn More</span>
                             <span class="p-ink"></span>
                         </button>
@@ -242,10 +357,130 @@
                 </div>
             </div>
         </div>
+
+        <div class="surface-section px-4 py-8 md:px-6 lg:px-8" id="trainers">
+            <div class="text-center font-bold text-900 text-5xl mb-3" style="color: #522888 !important;">Meet The Trainers</div>
+            <div class="text-center text-xl line-height-3 text-600 mb-6" style="color: #B97F24 !important;">Get to know the expert trainers who are dedicated to guiding you towards success with knowledge, experience, and passion.</div>
+                <div class="grid">
+                    <div class="col-12 md:col-6 xl:col-3 p-3">
+                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
+                            <img src="assets/demo/images/landing/VKGSnap.jpg" width="200" height="223" class="mb-3 w-full csf">
+                            <div class="flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Dr. V.K.Garg</div>
+                                    <p class="mt-0 mb-3 text-600">Senior Management Expert & PMP® Master Trainer with 48+ Years of Global Project Leadership</p>
+                                </div>
+                                
+                            </div>
+                            <!-- <ul class="list-none m-0 p-0">
+                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
+                                    <span class="text-600 font-medium text-sm">Created</span>
+                                    <span class="text-900 font-medium text-sm">Yesterday 11:30</span>
+                                </li>
+                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
+                                    <span class="text-600 font-medium text-sm">Dimensions</span>
+                                    <span class="text-900 font-medium text-sm">2732x1690</span>
+                                </li>
+                                <li class="px-0 py-2 flex justify-content-between align-items-center">
+                                    <span class="text-600 font-medium text-sm">Resolution</span>
+                                    <span class="text-900 font-medium text-sm">144x144</span>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-3 p-3">
+                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
+                            <img src="assets/demo/images/landing/YB.jpeg" width="200" height="223" class="mb-3 w-full csf">
+                            <div class="flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Dr. Yatin Bhatia</div>
+                                    <p class="mt-0 mb-3 text-600">Global Project Management Leader | PMP® & Six Sigma Black Belt Trainer | Expert in Transformational Leadership</p>
+                                </div>
+                                
+                            </div>
+                            <!-- <ul class="list-none m-0 p-0">
+                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
+                                    <span class="text-600 font-medium text-sm">Created</span>
+                                    <span class="text-900 font-medium text-sm">Yesterday 11:30</span>
+                                </li>
+                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
+                                    <span class="text-600 font-medium text-sm">Dimensions</span>
+                                    <span class="text-900 font-medium text-sm">2732x1690</span>
+                                </li>
+                                <li class="px-0 py-2 flex justify-content-between align-items-center">
+                                    <span class="text-600 font-medium text-sm">Resolution</span>
+                                    <span class="text-900 font-medium text-sm">144x144</span>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-3 p-3">
+                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
+                            <img src="assets/demo/images/landing/AK1.jpg" width="200" height="223" class="mb-3 w-full csf">
+                            <div class="flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Dr. Anuj Kulkarni</div>
+                                    <p class="mt-0 mb-3 text-600">Leadership & Entrepreneurship Expert | Certified Agile, PMP®, & Human-Centered Design Practitioner</p>
+                                </div>
+                                
+                            </div>
+                            <!-- <ul class="list-none m-0 p-0">
+                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
+                                    <span class="text-600 font-medium text-sm">Created</span>
+                                    <span class="text-900 font-medium text-sm">Yesterday 11:30</span>
+                                </li>
+                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
+                                    <span class="text-600 font-medium text-sm">Dimensions</span>
+                                    <span class="text-900 font-medium text-sm">2732x1690</span>
+                                </li>
+                                <li class="px-0 py-2 flex justify-content-between align-items-center">
+                                    <span class="text-600 font-medium text-sm">Resolution</span>
+                                    <span class="text-900 font-medium text-sm">144x144</span>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 xl:col-3 p-3">
+                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
+                            <img src="assets/demo/images/landing/NPSnap.jpg" width="200" height="223" class="mb-3 w-full">
+                            <div class="flex justify-content-between align-items-start">
+                                <div>
+                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Mr. Neelesh Pandey</div>
+                                    <p class="mt-0 mb-3 text-600">Experienced Project Management & Product Strategy Leader | PMP® & Six Sigma Black Belt</p>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="grid surface-card shadow-2 mt-5" style="border-radius: 10px;">
+                    <div class="col-12 md:col-3 px-5 py-5">
+                        <i class="pi pi-clock text-4xl text-yellow-600 mb-3"></i>
+                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">45,000+</div>
+                        <p class="text-700 m-0" style="color: #B97F24 !important;">Hours of Training Delivered.</p>
+                    </div>
+                    <div class="col-12 md:col-3 px-5 py-5">
+                        <i class="pi pi-file text-4xl text-yellow-600 mb-3"></i>
+                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">100+</div>
+                        <p class="text-700 m-0" style="color: #B97F24 !important;">Global Projects Managed.</p>
+                    </div>
+                    <div class="col-12 md:col-3 px-5 py-5">
+                        <i class="pi pi-book text-4xl text-yellow-600 mb-3"></i>
+                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">20+</div>
+                        <p class="text-700 m-0" style="color: #B97F24 !important;">Books Authored.</p>
+                    </div>
+                    <div class="col-12 md:col-3 px-5 py-5">
+                        <svg _ngcontent-ng-c724430211="" fill="transparent" stroke="#c79807" stroke-width="1" width="40px" height="38px" viewBox="-1 0 19 17" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><path _ngcontent-ng-c724430211="" d="M16.141 7.905c.24.102.24.269 0 .37l-7.204 3.058a1.288 1.288 0 0 1-.874 0L.859 8.276c-.24-.102-.24-.27 0-.371l7.204-3.058a1.287 1.287 0 0 1 .874 0zm-6.833 4.303 3.983-1.69v2.081c0 1.394-2.145 2.524-4.791 2.524s-4.79-1.13-4.79-2.524v-2.082l3.982 1.69a2.226 2.226 0 0 0 1.616 0zm4.94 1.677h1.642v-1.091a.822.822 0 1 0-1.643 0zm.82-3.603a.554.554 0 1 0-.553-.554.554.554 0 0 0 .554.554zm0 1.415a.554.554 0 1 0-.553-.555.554.554 0 0 0 .554.555z"></path></svg>
+                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">4</div>
+                        <p class="text-700 m-0" style="color: #B97F24 !important;">Honarary Doctorates</p>
+                    </div>
+                </div>
+        </div>
         
         <div class="surface-section px-4 py-8 md:px-6 lg:px-8" id="contact">
             <div class="grid"><div class="col-12 lg:col-6">
-                <!-- <div class="text-900 font-medium mb-4">Contact Us</div> -->
                 <div class="text-900 text-2xl font-bold mb-4" style="color: #522888 !important;">GET IN TOUCH</div>
                 <p class="text-700 text-xl line-height-3 pr-0 lg:pr-5" style="color: #B97F24 !important;">We’d love to hear from you! Whether you have a question, want to learn more about our courses, or need support, our team is here to help. Reach out to us through any of the following channels:</p>
                 <div class="col-12 md:col-6 lg:col-3 pl-0">
@@ -312,7 +547,6 @@
                 <div class="grid grid-nogutter surface-section px-4 py-4 md:px-6 lg:px-8 border-top-1 surface-border" style="background-image: url('assets/demo/images/landing/footer-bg-1.png');background-color: #eeeeee !important;">
                     <div class="col-12 lg:col-6 lg:border-right-1 surface-border">
                         <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class="w-20rem" style="margin-left: -50px;">
-                        <!-- <span class="text-900 block mt-4 mr-3">Learning Realtime</span> -->
                         <span class="text-500 block mt-4">Copyright © {{currentYear}} LearnSoft</span>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2 mt-4 lg:mt-0 lg:pl-4 flex flex-column">
@@ -390,4 +624,251 @@
         </div>
     </div>
     <p-scrollTop />
+    <p-dialog header="Training" [(visible)]="visibleCourse" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleCourse = false; tabNumber = 0;">
+        <p-tabView class="responsive-tab-view ml-2 hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
+            <p-tabPanel header="PMI-PMP"></p-tabPanel>
+            <p-tabPanel header="CAPM"></p-tabPanel>
+            <p-tabPanel header="Six Sigma"></p-tabPanel>
+        </p-tabView>
+        <div class="surface-section mt-4" *ngIf="tabNumber === 0">
+            <div class="text-500 mb-5">Prepare for the PMP certification with our comprehensive course, designed to equip you with the essential skills, knowledge, and strategies to successfully manage projects and lead teams.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">35 Hour PMP® Training</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="PMI-PMP® Exam Preparation" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Practice Exams" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Mock Tests" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Certificate of Completion" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
+                        
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="surface-section mt-4" *ngIf="tabNumber === 1">
+            <div class="text-500 mb-5">Prepare for the CAPM certification with our comprehensive, self-paced online course, designed to give you the foundational project management knowledge needed to advance your career.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">23 Hour CAPM® Training</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="CAPM® Exam Preparation" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Practice Exams" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Mock Tests" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Certificate of Completion" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
+                        
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
+                </li>
+                
+            </ul>
+        </div>
+       
+        <div class="surface-section mt-4" *ngIf="tabNumber === 2">
+            <div class="text-500 mb-5">Master the art of process improvement with our Six Sigma certification course, designed to equip you with the tools and methodologies to drive efficiency and quality in any organization.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Six Sigma Green Belt & Black Belt</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="Study Materials" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Real-World Case Studies" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Hands-On Exercises" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Certificate of Completion" class="mr-2 mb-2"></p-chip>                        
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
+                </li>
+                
+            </ul>
+        </div>
+    </p-dialog>
+
+    <p-dialog header="Certificates" [(visible)]="visibleCert" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleCert = false; tabNumber = 0;">
+        <p-tabView class="responsive-tab-view ml-2 hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
+            <p-tabPanel header="Business Analysis"></p-tabPanel>
+            <p-tabPanel header="Project Management"></p-tabPanel>
+            <p-tabPanel header="Design Thinking"></p-tabPanel>
+        </p-tabView>
+        <div class="surface-section mt-4" *ngIf="tabNumber === 0">
+            <div class="text-500 mb-5">Gain the skills to effectively analyze business needs, drive solutions, and deliver value with our comprehensive Business Analysis certification course, designed to elevate your career and decision-making abilities.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Business Analysis</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="Hands-on Projects" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Access to Case Studies" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Guided Exercises" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
+                        
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
+                </li>
+                
+            </ul>
+        </div> 
+        <div class="surface-section mt-4" *ngIf="tabNumber === 2">
+            <div class="text-500 mb-5">Unlock your creative potential with our online Design Thinking course, designed to help you solve complex problems through innovative, user-centered solutions.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Design Thinking</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="Sustainable Entrepreneurship and Innovation Training" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Access to Case Studies" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Guided Exercises" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
+                        
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="surface-section mt-4" *ngIf="tabNumber === 1">
+            <div class="text-500 mb-5">Equip yourself with the essential skills to lead successful projects with our comprehensive Project Management certification course, designed to prepare you for real-world challenges and industry-recognized credentials.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Project Management</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="Project Management Orientation" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Knowledge Area Focused Training" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Hands-on Projects" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Study Materials and Downloadable Resources" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Guided Exercises" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Post-Course Support and Mentorship" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Hands-On Experience with Project Management Tools" class="mr-2 mb-2"></p-chip>
+                        
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
+                </li>
+                
+            </ul>
+        </div>
+    </p-dialog>
+    <p-dialog header="Webinars & Workshops" [(visible)]="visibleWorkshop" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleWorkshop = false; tabNumber = 0;">
+        <div class="surface-section mt-4">
+            <div class="text-500 mb-5">Engage in interactive, expert-led live workshops and webinars, designed to provide practical insights, industry trends, and hands-on learning for immediate application in your professional projects.</div>
+            <ul class="list-none p-0 m-0">
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Project Management</div>
+                    
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
+                        <p-chip label="Live, Interactive Sessions" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Hands-On Activities" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Exclusive Q&A with Trainers" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="atest Tools, Techniques, and Trends" class="mr-2 mb-2"></p-chip>
+                        <p-chip label="Certificate of Participation" class="mr-2 mb-2"></p-chip>
+                    </div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
+                </li>
+                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
+                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
+                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
+                </li>
+                
+            </ul>
+        </div>
+    </p-dialog>
 </div>
