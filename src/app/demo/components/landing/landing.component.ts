@@ -31,13 +31,13 @@ export class LandingComponent implements OnInit{
         this.createForm();
         this.showSlides(this.slideIndex)
 
-        setInterval(() => {
-          this.slideIndex = this.slideIndex + 1;
-          if (this.slideIndex >= 4) {
-            this.slideIndex = 1
-          }
-          this.showSlides(this.slideIndex)
-        }, 4000)
+        // setInterval(() => {
+        //   this.slideIndex = this.slideIndex + 1;
+        //   if (this.slideIndex >= 4) {
+        //     this.slideIndex = 1
+        //   }
+        //   this.showSlides(this.slideIndex)
+        // }, 4000)
     }
  
     scrollToAnchor(location: string, wait: number): void {

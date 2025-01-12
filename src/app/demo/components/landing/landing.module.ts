@@ -17,6 +17,9 @@ import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
 import { TagModule } from 'primeng/tag';
 import { ChipModule } from 'primeng/chip';
+import { ServicesComponent } from './services/services.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { BadgeModule } from 'primeng/badge';
 
 
 @NgModule({
@@ -37,8 +40,10 @@ import { ChipModule } from 'primeng/chip';
         TabViewModule,
         DialogModule,
         TagModule,
-        ChipModule
+        ChipModule,
+        SidebarModule,
+        BadgeModule
     ],
-    declarations: [LandingComponent]
+    declarations: [LandingComponent, ServicesComponent]
 })
 export class LandingModule { }

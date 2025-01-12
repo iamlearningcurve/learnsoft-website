@@ -2,9 +2,10 @@
     <div class="landing-wrapper overflow-hidden">
 
         <!-- <div class="fixed w-full top-0 z-3" style="background-color: white;"> -->
-            <div class="mt-2 py-4 px-4 mx-0 md:mx-0 lg:mx-0 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
+            <div class="py-2 px-4 mx-0 md:mx-0 lg:mx-0 lg:px-8 flex align-items-center justify-content-between relative lg:static mb-3 md:mb-0">
                 <a class="flex align-items-center" href="javascript:void(0);" (click)="scrollToAnchor('home', 100)">
-                    <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2">
+                    <img src="assets/demo/images/landing/learn-logo.png" alt="LCT Logo" height="60" class="mr-0 lg:mr-2">
+                    <!-- <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class=" mr-0 lg:mr-2"> -->
                 </a>
                 <a #menu pRipple class="cursor-pointer block lg:hidden text-700 z-3" pStyleClass="@next" enterFromClass="hidden" leaveToClass="hidden" [hideOnOutsideClick]="true">
                     <i class="pi pi-bars text-4xl"></i>
@@ -12,33 +13,33 @@
                 <div class="z-3 align-items-center surface-0 flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full left-0 px-6 lg:px-0 z-2" enterFromClass="hidden" leaveToClass="hidden" style="top:106px">
                     <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row cursor-pointer">
                         <li>
-                            <a (click)="scrollToAnchor('home', 100); this.tab = 0" pRipple [class]="tab === 0 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                            <a (click)="this.tab = 0; scrollToAnchor('home', 100);" pRipple [class]="tab === 0 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
                                <span>Home</span>
                             </a>
                         </li>
                         <li>
-                            <a (click)="scrollToAnchor('about-us', 100); this.tab = 1" pRipple [class]="tab === 1 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                            <a (click)="this.tab = 1; scrollToAnchor('about-us', 100);" pRipple [class]="tab === 1 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
                                 <span>About</span>
                             </a>
                         </li>
                         <li>
-                            <a (click)="scrollToAnchor('portfolio', 100); this.tab = 2" pRipple [class]="tab === 2 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                            <a (click)="this.tab = 2; scrollToAnchor('portfolio', 100);" pRipple [class]="tab === 2 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
                                 <span>Portfolio</span>
                             </a>
                         </li>
                         <li>
-                            <a (click)="scrollToAnchor('careers', 100); this.tab = 3" pRipple [class]="tab === 3 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                            <a (click)="this.tab = 3; scrollToAnchor('careers', 100);" pRipple [class]="tab === 3 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
                                 <span>Careers</span>
                             </a>
                         </li>
                         <li>
-                            <a (click)="scrollToAnchor('services', 100); this.tab = 4" pRipple [class]="tab === 4 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                            <a (click)="this.tab = 4" pRipple [class]="tab === 4 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
                                 <span>Services</span>
                             </a>
                         </li>
                         <li>
-                            <a (click)="scrollToAnchor('trainers', 100); this.tab = 5" pRipple [class]="tab === 5 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
-                                <span>Trainers</span>
+                            <a (click)="this.tab = 5; scrollToAnchor('partnerships', 100);" pRipple [class]="tab === 5 ? 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 active-tab' : 'flex m-0 md:ml-5 px-0 py-3 text-900 font-bold line-height-3 passive-tab'">
+                                <span>Partnerships</span>
                             </a>
                         </li>
                     </ul>
@@ -47,506 +48,286 @@
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
-    
-        <!-- <div id="hero" class="flex flex-column pt-4 px-4 lg:px-8 overflow-hidden" 
-            style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), radial-gradient(77.36% 256.97% at 77.36% 57.52%, #EEEFAF 0%, #C3E3FA 100%); clip-path: ellipse(150% 87% at 93% 13%);">
-            <div class="mx-4 md:mx-8 mt-0 md:mt-4">
-                <h1 class="text-6xl font-bold text-gray-900 line-height-2"><span class="font-light block">Eu sem integer</span>eget magna fermentum</h1>
-                <p class="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Sed blandit libero volutpat sed cras. Fames ac turpis egestas integer. Placerat in egestas erat... </p>
-                <button pButton pRipple type="button" label="Get Started" class="p-button-rounded text-xl border-none mt-3 bg-blue-500 font-normal line-height-3 px-3 text-white"></button>
-            </div>
-            <div class="flex justify-content-center md:justify-content-end">
-                <img src="assets/demo/images/landing/screen-1.png" alt="Hero Image" class="w-9 md:w-auto">
-            </div>
-        </div> -->
-        <div class="grid grid-nogutter text-800" style="background-color: #D6D5C9;" id="home">
-            <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
-                <section>
-                    <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 1">{{'Unlock Your Potential'}}</span>
-                    <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 1">{{'with Engaging, Interactive Learning'}}</div>
-                    <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 1">Transform the way you learn with personalized courses designed for your success. From skill-building to career advancement, we empower you every step of the way.</p>
-                    
-                    <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 2">{{'Empower Your Career'}}</span>
-                    <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 2">{{'with Learnsoft & KnowledgeWare'}}</div> <img *ngIf="slideIndex === 2" class="custom-image-position" src="assets/demo/images/landing/knowledgeware-logo.png"  height="100">
-                    <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 2">Earn Project Management, Six Sigma, and Business Analysis certifications through our exclusive partnership with KnowledgeWare. Gain the skills and credentials to boost your career.</p>
-
-                    <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 3">{{'Elevate Your Skills'}}</span>
-                    <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 3">{{'with Expert-Led & Professional Certifications'}}</div>
-                    <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 3">Unlock your potential through Project Management, Six Sigma, and Business Analysis certifications, with hands-on training from PMI/PMP-certified professionals, designed for real-world impact.</p>
-
-                    <button pButton pRipple label="Explore Courses" type="button" class="mr-3 p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('services', 100); this.tab = 2"></button>
-                    <div style="text-align:center" class="justify-content-end">
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                        <span class="dot"></span> 
-                      </div>
-                </section>
-            </div>
-            <div class="col-12 md:col-6 overflow-hidden">
-                <img src="assets/demo/images/landing/le.jpg" alt="Image" height="600" width="900" class="md:ml-auto block" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
-            </div>
-        </div>
-        
-        <div class="py-4 px-4 lg:px-8 mx-0" style="background-color: #efeae2;" >
-            
-            <div id="about-us">
-                <div class="text-center px-6 py-8">
-                    <div class="text-900 text-4xl font-semibold mb-3" style="color: #522888 !important">About Us</div>
-                    <p class="text-700 text-xl my-0 line-height-3" style="color: #754D9D !important;">At Learn Soft, we believe that learning should be accessible, engaging, and transformative. We are committed to empowering individuals and organizations through high-quality, flexible online courses that meet the demands of today’s fast-paced world</p>
-                </div><div class="grid mb-4">
-                    <div class="col-12 md:col-4 mb-4 px-5">
-                        <button class="p-link p-3 shadow-2 mb-3 inline-block bg-primary" style="border-radius: 10px; background-color: #522888 !important; color: #BF9553 !important;">
-                            <i class="pi pi-file-edit text-4xl"></i>
-                        </button>
-                        <div class="text-bluegray-500 mb-3 font-medium" style="color: #522888 !important;">Personalized Learning Paths</div>
-                        <div class="text-900 mb-3 font-medium text-xl" style="color: #B97F24 !important;">Customizable, Tailored, Goal-oriented</div>
-                        <span class="text-600 line-height-3" style="color: #754D9D !important;">Tailored courses to match your unique goals and learning style.</span>
-                    </div>
-                    <div class="col-12 md:col-4 mb-4 px-5">
-                        <button class="p-link p-3 shadow-2 mb-3 inline-block bg-bluegray-400 text-white" style="border-radius: 10px; background-color: #522888 !important; color: #BF9553 !important;">
-                            <i class="pi pi-users text-4xl"></i>
-                        </button>
-                        <div class="text-bluegray-500 mb-3 font-medium" style="color: #522888 !important;">Expert Instructors</div>
-                        <div class="text-900 mb-3 font-medium text-xl" style="color: #B97F24 !important;">Knowledgeable, Experienced, Inspiring</div>
-                        <span class="text-600 line-height-3" style="color: #754D9D !important;">Learn from experienced professionals who are leaders in their fields.</span>
-                    </div>
-                    <div class="col-12 md:col-4 mb-4 px-5">
-                        <button class="p-link p-3 shadow-2 mb-3 inline-block bg-bluegray-400 text-white" style="border-radius: 10px; background-color: #522888 !important; color: #BF9553 !important;">
-                            <i class="pi pi-wrench text-4xl"></i>
-                        </button>
-                        <div class="text-bluegray-500 mb-3 font-medium" style="color: #522888 !important;">Interactive Tools</div>
-                        <div class="text-900 mb-3 font-medium text-xl" style="color: #B97F24 !important;">Engaging, Collaborative, Dynamic</div>
-                        <span class="text-600 line-height-3" style="color: #754D9D !important;">Engage with quizzes, assignments, and peer communities to solidify your knowledge.</span>
-                    </div>
-                </div>
-                
-                <div class="surface-card shadow-2 border-round p-5" style="background: radial-gradient(69.84% 69.84% at 50% 100%, rgba(82, 40, 136, 0.15) 0%, rgba(255, 255, 255, 0) 100%);">
-                    <div class="grid">
-                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center sm:border-right-1 border-bottom-1 lg:border-bottom-none surface-border cursor-pointer">
-                            <div class="flex align-items-center mr-3">
-                                
-                            </div>
-                            <div>
-                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">PMI Certified</span>
-                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Instructors</p>
-                            </div>
-                        </div>
-                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center lg:border-right-1 border-bottom-1 lg:border-bottom-none surface-border cursor-pointer">
-                            <div class="flex align-items-center mr-3">
-                                
-                            </div>
-                            <div>
-                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">Real-World</span>
-                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Project Management Experience</p>
-                            </div>
-                        </div>
-                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center sm:border-right-1 border-bottom-1 sm:border-bottom-none surface-border cursor-pointer">
-                            <div class="flex align-items-center mr-3">
-                                
-                            </div>
-                            <div>
-                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">PMP®, Agile, Scrum</span>
-                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Frameworks</p>
-                            </div>
-                        </div>
-                        <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center cursor-pointer">
-                            <div class="flex align-items-center mr-3">
-                                
-                            </div>
-                            <div>
-                                <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">Individual & Corporate</span>
-                                <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Trainings</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="parallax">
-        </div>
        
-        <div class="surface-section px-4 py-8 md:px-6 lg:px-8" style="background-color: #D6D5C9;" id="portfolio">
-            <div class="grid w-full">
-                <div class="col-12 md:col-6">
-                    <img src="assets/demo/images/landing/join-1500w.jpg" alt="Image" class="w-full">
+        <ng-container>
+            <div [class]="tab === 4 ? 'hidden': ''">
+                <div class="grid grid-nogutter text-800" style="background-color: #D6D5C9;" id="home">
+                    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+                        <section>
+                            <span class="block text-6xl font-bold mb-1 fade" style="color: #522888 !important;" *ngIf="slideIndex === 1">{{'Unlock Your Potential'}}</span>
+                            <div class="text-6xl text-primary font-bold mb-3 fade" style="color: #522888 !important;" *ngIf="slideIndex === 1">{{'with Engaging, Interactive Learning'}}</div>
+                            <p class="mt-0 mb-4 text-900 text-xl line-height-3 fade" style="color: #B97F24 !important;" *ngIf="slideIndex === 1">Transform the way you learn with personalized courses designed for your success. From skill-building to career advancement, we empower you every step of the way.</p>
+                            <button pButton pRipple label="Explore Courses" type="button" class="mr-3 p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('services', 100); this.tab = 2"></button>
+                        </section>
+                    </div>
+                    <div class="col-12 md:col-6 overflow-hidden">
+                        <img src="assets/demo/images/landing/le.jpg" alt="Image" height="600" width="900" class="md:ml-auto block" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+                    </div>
                 </div>
-                <div class="col-12 md:col-6 md:pl-6">
-                    <div class="text-4xl font-bold text-900 mb-3" style="color: #522888 !important;">Portfolio</div>
-                    <div class="text-700 text-xl mb-5 line-height-3 mb-5" style="color: #B97F24 !important;">At Learn Soft, we are proud of the impact we've made in helping learners and businesses grow. Our portfolio showcases a diverse range of projects, from empowering individuals with the latest skills to transforming companies with tailored corporate training solutions. Explore some of our most successful case studies and see how our services have helped our clients achieve their learning and development goals.</div>
-                    <div class="border-round p-4">
+                <div class="py-4 px-4 lg:px-8 mx-0" style="background-color: #efeae2;" >
+                
+                    <div id="about-us">
+                        <div class="text-center px-6 py-8">
+                            <div class="text-900 text-4xl font-semibold mb-3" style="color: #522888 !important">About Us</div>
+                            <p class="text-700 text-xl my-0 line-height-3" style="color: #754D9D !important;">At Learn Soft, we believe that learning should be accessible, engaging, and transformative. We are committed to empowering individuals and organizations through high-quality, flexible online courses that meet the demands of today’s fast-paced world</p>
+                        </div><div class="grid mb-4">
+                            <div class="col-12 md:col-4 mb-4 px-5">
+                                <button class="p-link p-3 shadow-2 mb-3 inline-block bg-primary" style="border-radius: 10px; background-color: #522888 !important; color: #BF9553 !important;">
+                                    <i class="pi pi-file-edit text-4xl"></i>
+                                </button>
+                                <div class="text-bluegray-500 mb-3 font-medium" style="color: #522888 !important;">Personalized Learning Paths</div>
+                                <div class="text-900 mb-3 font-medium text-xl" style="color: #B97F24 !important;">Customizable, Tailored, Goal-oriented</div>
+                                <span class="text-600 line-height-3" style="color: #754D9D !important;">Tailored courses to match your unique goals and learning style.</span>
+                            </div>
+                            <div class="col-12 md:col-4 mb-4 px-5">
+                                <button class="p-link p-3 shadow-2 mb-3 inline-block bg-bluegray-400 text-white" style="border-radius: 10px; background-color: #522888 !important; color: #BF9553 !important;">
+                                    <i class="pi pi-users text-4xl"></i>
+                                </button>
+                                <div class="text-bluegray-500 mb-3 font-medium" style="color: #522888 !important;">Expert Instructors</div>
+                                <div class="text-900 mb-3 font-medium text-xl" style="color: #B97F24 !important;">Knowledgeable, Experienced, Inspiring</div>
+                                <span class="text-600 line-height-3" style="color: #754D9D !important;">Learn from experienced professionals who are leaders in their fields.</span>
+                            </div>
+                            <div class="col-12 md:col-4 mb-4 px-5">
+                                <button class="p-link p-3 shadow-2 mb-3 inline-block bg-bluegray-400 text-white" style="border-radius: 10px; background-color: #522888 !important; color: #BF9553 !important;">
+                                    <i class="pi pi-wrench text-4xl"></i>
+                                </button>
+                                <div class="text-bluegray-500 mb-3 font-medium" style="color: #522888 !important;">Interactive Tools</div>
+                                <div class="text-900 mb-3 font-medium text-xl" style="color: #B97F24 !important;">Engaging, Collaborative, Dynamic</div>
+                                <span class="text-600 line-height-3" style="color: #754D9D !important;">Engage with quizzes, assignments, and peer communities to solidify your knowledge.</span>
+                            </div>
+                        </div>
                         
-                        <div class="grid">
-                            <div class="col-12 lg:col-4 p-3"><div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
-                                <div class="flex flex-column align-items-center justify-content-between">
-                                    <div class="flex flex-row">
-                                        <!-- <span class="text-3xl text-900 font-bold">40K</span> -->
-                                        <p class="mt-1 mb-0 text-600 text-xl">Training for Individuals</p>
+                        <div class="surface-card shadow-2 border-round p-5" style="background: radial-gradient(69.84% 69.84% at 50% 100%, rgba(82, 40, 136, 0.15) 0%, rgba(255, 255, 255, 0) 100%);">
+                            <div class="grid">
+                                <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center sm:border-right-1 border-bottom-1 lg:border-bottom-none surface-border cursor-pointer">
+                                    <div class="flex align-items-center mr-3">
+                                        
                                     </div>
                                     <div>
-                                        <img src="assets/demo/images/landing/stats-illustration-4.svg">
+                                        <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">PMI Certified</span>
+                                        <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Instructors</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center lg:border-right-1 border-bottom-1 lg:border-bottom-none surface-border cursor-pointer">
+                                    <div class="flex align-items-center mr-3">
+                                        
+                                    </div>
+                                    <div>
+                                        <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">Real-World</span>
+                                        <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Project Management Experience</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center sm:border-right-1 border-bottom-1 sm:border-bottom-none surface-border cursor-pointer">
+                                    <div class="flex align-items-center mr-3">
+                                        
+                                    </div>
+                                    <div>
+                                        <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">PMP®, Agile, Scrum</span>
+                                        <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Frameworks</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 sm:col-6 lg:col-3 p-3 flex align-items-center sm:justify-content-center cursor-pointer">
+                                    <div class="flex align-items-center mr-3">
+                                        
+                                    </div>
+                                    <div>
+                                        <span class="text-900 text-2xl font-medium" style="color: #B97F24 !important;">Individual & Corporate</span>
+                                        <p class="text-xl text-500 font-medium mt-2 mb-0" style="color: #522888 !important;">Trainings</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 lg:col-4 p-3">
-                            <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
-                                <div class="flex flex-column align-items-center justify-content-between">
-                                 <div class="flex flex-row">
-                                    <!-- <span class="text-3xl text-900 font-bold">24K</span> -->
-                                    <p class="mt-1 mb-0 text-600 text-xl">Certification Programs</p>
-                                </div>
-                                <div>
-                                    <img src="assets/demo/images/landing/stats-illustration-5.svg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 lg:col-4 p-3">
-                        <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
-                            <div class="flex flex-column align-items-center justify-content-between">
-                                <div class="flex flex-row">
-                                    <!-- <span class="text-3xl text-900 font-bold">15K</span> -->
-                                    <p class="mt-1 mb-0 text-600 text-xl">Leadership Development</p>
-                                </div>
-                                <div>
-                                    <img src="assets/demo/images/landing/stats-illustration-6.svg">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                    </div>
+                <div class="parallax">
                 </div>
-            </div>
-        </div>
-        <div class="block-content" id="careers">
-            <div class="ng-star-inserted">
-                <div class="px-4 md:px-6 lg:px-8" style="background-color: #D6D5C9;">
-                    <div class="grid py-4">
+                <div class="surface-section px-4 py-8 md:px-6 lg:px-8" style="background-color: #D6D5C9;" id="portfolio">
+                    <div class="grid w-full">
                         <div class="col-12 md:col-6">
-                            <div class="pr-0 md:pr-8">
-                                <div class="text-blue-500 font-bold text-5xl mb-5" style="color: #522888 !important;">Join Our Team</div>
-                                <span class="text-gray-400 line-height-3 mt-3 text-xl" style="color: #B97F24 !important;">At Learn Soft, we’re more than just a company — we’re a community of passionate individuals dedicated to making a difference in the world of education. We believe in empowering our team to grow, innovate, and inspire through meaningful work. If you're excited about shaping the future of learning, we want to hear from you.</span>
-                                <br/><br/>
-                                <span class="text-blue-500 font-bold text-5xl mt-5" style="color: #522888 !important;">Why Us?</span>
-                                <div class="mb-5 border-purple-800 pl-3 mt-5" style="border-left: 4px solid;">
-                                    <span class="text-white font-bold text-2xl" style="color: #522888 !important;">Innovative Environment</span>
-                                    <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">Work on cutting-edge e-learning solutions with the latest technologies.</div>
-                                </div>
-                                <div class="mb-5">
-                                    <span class="text-gray-400 font-bold text-2xl" style="color: #522888 !important;">Professional Growth</span>
-                                    <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">We prioritize your development with opportunities for learning, training, and career advancement.</div>
-                                </div>
-                                <div class="mb-5">
-                                    <span class="text-gray-400 font-bold text-2xl" style="color: #522888 !important;">Collaborative Culture</span>
-                                    <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">Join a supportive, team-oriented workplace where your ideas are valued.</div>
-                                </div>
-                                <button pButton pRipple label="Contact Us" type="button" class="p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('contact', 100)"></button>
-
+                            <img src="assets/demo/images/landing/join-1500w.jpg" alt="Image" class="w-full">
+                        </div>
+                        <div class="col-12 md:col-6 md:pl-6">
+                            <div class="text-4xl font-bold text-900 mb-3" style="color: #522888 !important;">Portfolio</div>
+                            <div class="text-700 text-xl mb-5 line-height-3 mb-5" style="color: #B97F24 !important;">At Learn Soft, we are proud of the impact we've made in helping learners and businesses grow. Our portfolio showcases a diverse range of projects, from empowering individuals with the latest skills to transforming companies with tailored corporate training solutions. Explore some of our most successful case studies and see how our services have helped our clients achieve their learning and development goals.</div>
+                            <div class="border-round p-4">
                                 
+                                <div class="grid">
+                                    <div class="col-12 lg:col-4 p-3"><div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
+                                        <div class="flex flex-column align-items-center justify-content-between">
+                                            <div class="flex flex-row">
+                                                <!-- <span class="text-3xl text-900 font-bold">40K</span> -->
+                                                <p class="mt-1 mb-0 text-600 text-xl">Training for Individuals</p>
+                                            </div>
+                                            <div>
+                                                <img src="assets/demo/images/landing/stats-illustration-4.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 lg:col-4 p-3">
+                                    <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
+                                        <div class="flex flex-column align-items-center justify-content-between">
+                                         <div class="flex flex-row">
+                                            <!-- <span class="text-3xl text-900 font-bold">24K</span> -->
+                                            <p class="mt-1 mb-0 text-600 text-xl">Certification Programs</p>
+                                        </div>
+                                        <div>
+                                            <img src="assets/demo/images/landing/stats-illustration-5.svg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 lg:col-4 p-3">
+                                <div class="shadow-2 surface-card p-3" style="border-radius: 12px;">
+                                    <div class="flex flex-column align-items-center justify-content-between">
+                                        <div class="flex flex-row">
+                                            <!-- <span class="text-3xl text-900 font-bold">15K</span> -->
+                                            <p class="mt-1 mb-0 text-600 text-xl">Leadership Development</p>
+                                        </div>
+                                        <div>
+                                            <img src="assets/demo/images/landing/stats-illustration-6.svg">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 md:col-6">
-                            <img src="assets/demo/images/landing/get-started-1500w.jpg" alt="Image" class="w-full">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="px-4 py-8 md:px-6 lg:px-8" style="background: radial-gradient(69.84% 69.84% at 50% 100%, rgba(82, 40, 136, 0.15) 0%, rgba(255, 255, 255, 0) 100%);" id="services">
-            <div class="text-900 text-5xl font-bold mb-3" style="color: #522888 !important;">Our Services</div>
-            <div class="text-700 text-xl" style="color: #B97F24 !important;">Empowering success through e-learning solutions.</div>
-            <div class="grid mt-7">
-                <div class="col-12 md:col-4">
-                    <div class="shadow-1 p-5 surface-card text-center border-round" style="min-height: 406px;">
-                        <div class="border-circle bg-purple-50 p-4 text-yellow-700 inline-flex justify-content-center align-items-center mb-4">
-                            <i class="pi pi-id-card text-5xl"></i>
+                <div class="block-content" id="careers">
+                    <div class="ng-star-inserted">
+                        <div class="px-4 md:px-6 lg:px-8" style="background-color: #D6D5C9;">
+                            <div class="grid py-4">
+                                <div class="col-12 md:col-6">
+                                    <div class="pr-0 md:pr-8">
+                                        <div class="text-blue-500 font-bold text-5xl mb-5" style="color: #522888 !important;">Join Our Team</div>
+                                        <span class="text-gray-400 line-height-3 mt-3 text-xl" style="color: #B97F24 !important;">At Learn Soft, we’re more than just a company — we’re a community of passionate individuals dedicated to making a difference in the world of education. We believe in empowering our team to grow, innovate, and inspire through meaningful work. If you're excited about shaping the future of learning, we want to hear from you.</span>
+                                        <br/><br/>
+                                        <span class="text-blue-500 font-bold text-5xl mt-5" style="color: #522888 !important;">Why Us?</span>
+                                        <div class="mb-5 border-purple-800 pl-3 mt-5" style="border-left: 4px solid;">
+                                            <span class="text-white font-bold text-2xl" style="color: #522888 !important;">Innovative Environment</span>
+                                            <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">Work on cutting-edge e-learning solutions with the latest technologies.</div>
+                                        </div>
+                                        <div class="mb-5">
+                                            <span class="text-gray-400 font-bold text-2xl" style="color: #522888 !important;">Professional Growth</span>
+                                            <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">We prioritize your development with opportunities for learning, training, and career advancement.</div>
+                                        </div>
+                                        <div class="mb-5">
+                                            <span class="text-gray-400 font-bold text-2xl" style="color: #522888 !important;">Collaborative Culture</span>
+                                            <div class="text-gray-400 line-height-3 mt-3" style="color: #B97F24 !important;">Join a supportive, team-oriented workplace where your ideas are valued.</div>
+                                        </div>
+                                        <button pButton pRipple label="Contact Us" type="button" class="p-button-raised" style="background-color: #522888 !important;" (click)="scrollToAnchor('contact', 100)"></button>
+        
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-12 md:col-6">
+                                    <img src="assets/demo/images/landing/get-started-1500w.jpg" alt="Image" class="w-full">
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Certification Programs</div>
-                        <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Boost your credentials and stand out in the job market with Learn Soft's industry-recognized certifications. Our courses in IT, project management, marketing, and more provide real-world knowledge and hands-on experience trusted by employers.</div>
-                       
-                        <div class="flex flex-row justify-content-center flex-wrap gap-2">
-                            <!-- <p-tag severity="warn" value="Project Management" /><p-tag severity="warn" value="Six Sigma" /><p-tag severity="warn" value="Business Analysis" /><p-tag severity="warn" value="Design Thinking" /> -->
-                            
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Business Analysis</span>
-                            </span>
-                            <!-- <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Business Analysis</span>
-                            </span> -->
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Design Thinking</span>
-                            </span>
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Project Management</span>
-                            </span>
-                        </div>
-                         <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component mt-2" (click)="visibleCert = true">
-                            <span class="p-button-label" style="color: #522888 !important;">Learn More</span>
-                            <span class="p-ink"></span>
-                        </button>
                     </div>
-                </div>
-                <div class="col-12 md:col-4">
-                    <div class="shadow-1 p-5 surface-card text-center border-round" style="min-height: 406px;">
-                        <div class="border-circle bg-purple-50 p-4 text-yellow-700 inline-flex justify-content-center align-items-center mb-4">
-                            <i class="pi pi-book text-5xl"></i>
+                </div>   
+                <div class="surface-section px-4 py-8 md:px-6 lg:px-8" id="partnerships" style="background: radial-gradient(69.84% 69.84% at 50% 100%, rgba(185, 127, 36, 0.15) 0%, rgba(255, 255, 255, 0) 100%);">
+                    <div class="flex flex-wrap align-items-center justify-content-between">
+                        <div class="w-full lg:w-6 pr-0 lg:pr-4">
+                            <div class="font-bold text-900 text-4xl mb-3" style="color: #522888 !important;">Our Partnerships</div>
+                            <p class="text-700 m-0 text-xl" style="color: #B97F24 !important;">Our strategic partnerships with Knowledgeware and Learning Curve Technologies empower us to deliver exceptional online courses, training programs, and live webinars designed to foster learning and growth.</p>
                         </div>
-                        <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Training for Individuals & Corporates</div>
-                        <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Unlock your potential with personalized training designed to equip you with the skills and knowledge to excel in your career. From PMP to Six Sigma, gain industry-recognized certifications that will empower you to lead, innovate, and thrive in your professional journey.</div>
-                        <div class="flex flex-row justify-content-center flex-wrap gap-2">
-                            <!-- <p-tag severity="warn" value="Project Management" /><p-tag severity="warn" value="Six Sigma" /><p-tag severity="warn" value="Business Analysis" /><p-tag severity="warn" value="Design Thinking" /> -->
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">PMI-PMP Training</span>
-                            </span>
-                            <!-- <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">PMI</span>
-                            </span> -->
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">CAPM Training</span>
-                            </span>
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600 mt-2" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Six Sigma Training</span>
-                            </span>
-                        </div>
-                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component" (click)="visibleCourse = true">
-                            <span class="p-button-label" style="color: #522888 !important;">Learn More</span>
-                            <span class="p-ink"></span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-12 md:col-4">
-                    <div class="shadow-1 p-5 surface-card text-center border-round" style="min-height: 406px;">
-                        <div class="border-circle bg-purple-50 p-4 text-yellow-700 inline-flex justify-content-center align-items-center mb-4">
-                            <i class="pi pi-video text-5xl"></i>
-                        </div>
-                        <div class="text-900 font-medium text-2xl mb-4" style="color: #522888 !important;">Live Webinars & Workshops</div>
-                        <div class="text-700 mb-4 line-height-3 text-justify" style="color: #B97F24 !important;">Learn Soft offers live, instructor-led webinars and workshops covering specific topics and trends. Engage with industry experts, ask questions, and gain actionable insights in real time. Enhance your learning and stay ahead with up-to-date, expert-led sessions.</div>
-                        <div class="flex flex-row justify-content-center flex-wrap gap-2">
-                            <!-- <p-tag severity="warn" value="Project Management" /><p-tag severity="warn" value="Six Sigma" /><p-tag severity="warn" value="Business Analysis" /><p-tag severity="warn" value="Design Thinking" /> -->
-                            
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Entrepreneurship</span>
-                            </span>
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Leadership</span>
-                            </span>
-                            <span class="inline-flex align-items-center bg-purple-50 px-3 py-2 mr-2 mb-2 lg:mb-0 border-1 border-purple-600" style="border-radius: 50px;">
-                                <i class="pi pi-check text-purple-800 mr-2"></i>
-                                <span class="text-gray-700 font-medium" style="color: #522888 !important;">Digital Transformation</span>
-                            </span>
-                            
-                        </div>
-                        <button pbutton="" pripple="" label="Learn More" class="p-element p-ripple p-button-text font-bold p-button p-component" (click)="visibleWorkshop = true">
-                            <span class="p-button-label" style="color: #522888 !important;">Learn More</span>
-                            <span class="p-ink"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="surface-section px-4 py-8 md:px-6 lg:px-8" id="trainers">
-            <div class="text-center font-bold text-900 text-5xl mb-3" style="color: #522888 !important;">Meet The Trainers</div>
-            <div class="text-center text-xl line-height-3 text-600 mb-6" style="color: #B97F24 !important;">Get to know the expert trainers who are dedicated to guiding you towards success with knowledge, experience, and passion.</div>
-                <div class="grid">
-                    <div class="col-12 md:col-6 xl:col-3 p-3">
-                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
-                            <img src="assets/demo/images/landing/VKGSnap.jpg" width="200" height="223" class="mb-3 w-full csf">
-                            <div class="flex justify-content-between align-items-start">
-                                <div>
-                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Dr. V.K.Garg</div>
-                                    <p class="mt-0 mb-3 text-600">Senior Management Expert & PMP® Master Trainer with 48+ Years of Global Project Leadership</p>
+                        <div class="w-full lg:w-6 mt-4 lg:mt-0">
+                            <div class="grid grid-nogutter">
+                                <div class="col-12 sm:col-6 xl:col-4 p-4">
+                                    <img src="assets/demo/images/landing/knowledgeware-logo.png" alt="Image" class="custom-img" height="50">
                                 </div>
                                 
-                            </div>
-                            <!-- <ul class="list-none m-0 p-0">
-                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
-                                    <span class="text-600 font-medium text-sm">Created</span>
-                                    <span class="text-900 font-medium text-sm">Yesterday 11:30</span>
-                                </li>
-                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
-                                    <span class="text-600 font-medium text-sm">Dimensions</span>
-                                    <span class="text-900 font-medium text-sm">2732x1690</span>
-                                </li>
-                                <li class="px-0 py-2 flex justify-content-between align-items-center">
-                                    <span class="text-600 font-medium text-sm">Resolution</span>
-                                    <span class="text-900 font-medium text-sm">144x144</span>
-                                </li>
-                            </ul> -->
-                        </div>
-                    </div>
-                    <div class="col-12 md:col-6 xl:col-3 p-3">
-                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
-                            <img src="assets/demo/images/landing/YB.jpeg" width="200" height="223" class="mb-3 w-full csf">
-                            <div class="flex justify-content-between align-items-start">
-                                <div>
-                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Dr. Yatin Bhatia</div>
-                                    <p class="mt-0 mb-3 text-600">Global Project Management Leader | PMP® & Six Sigma Black Belt Trainer | Expert in Transformational Leadership</p>
+                                <div class="col-12 sm:col-6 xl:col-4 p-4">
+                                    <img src="assets/demo/images/landing/logo.svg" alt="Image" class="custom-img-2" height="50">
                                 </div>
-                                
                             </div>
-                            <!-- <ul class="list-none m-0 p-0">
-                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
-                                    <span class="text-600 font-medium text-sm">Created</span>
-                                    <span class="text-900 font-medium text-sm">Yesterday 11:30</span>
-                                </li>
-                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
-                                    <span class="text-600 font-medium text-sm">Dimensions</span>
-                                    <span class="text-900 font-medium text-sm">2732x1690</span>
-                                </li>
-                                <li class="px-0 py-2 flex justify-content-between align-items-center">
-                                    <span class="text-600 font-medium text-sm">Resolution</span>
-                                    <span class="text-900 font-medium text-sm">144x144</span>
-                                </li>
-                            </ul> -->
                         </div>
                     </div>
-                    <div class="col-12 md:col-6 xl:col-3 p-3">
-                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
-                            <img src="assets/demo/images/landing/AK1.jpg" width="200" height="223" class="mb-3 w-full csf">
-                            <div class="flex justify-content-between align-items-start">
+                </div>
+                <div class="surface-section px-4 py-8 md:px-6 lg:px-8" id="contact">
+                    <div class="grid">
+                        <div class="col-12 lg:col-6">
+                            <div class="text-900 text-2xl font-bold mb-4" style="color: #522888 !important;">GET IN TOUCH</div>
+                            <p class="text-700 text-xl line-height-3 pr-0 lg:pr-5" style="color: #B97F24 !important;">We’d love to hear from you! Whether you have a question, want to learn more about our courses, or need support, our team is here to help. Reach out to us through any of the following channels:</p>
+                            <div class="col-12 md:col-6 lg:col-3 pl-0">
+                            <div class="flex align-items-start">
                                 <div>
-                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Dr. Anuj Kulkarni</div>
-                                    <p class="mt-0 mb-3 text-600">Leadership & Entrepreneurship Expert | Certified Agile, PMP®, & Human-Centered Design Practitioner</p>
+                                    <span class="flex align-items-center justify-content-center surface-100 border-round mr-3" style="height: 3rem; width: 3rem; background-color: #522888 !important"><i class="pi pi-phone text-900 text-4xl" style="color: #BF9553 !important;"></i></span>
                                 </div>
-                                
+                                <div>
+                                    <span class="text-xl text-900 mb-2 font-medium" style="color: #754D9D !important;">Phone</span>
+                                    <p class="text-700 line-height-3" style="color: #B97F24 !important;">+919840781198</p>
+                                </div>
                             </div>
-                            <!-- <ul class="list-none m-0 p-0">
-                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
-                                    <span class="text-600 font-medium text-sm">Created</span>
-                                    <span class="text-900 font-medium text-sm">Yesterday 11:30</span>
-                                </li>
-                                <li class="px-0 py-2 flex justify-content-between align-items-center border-bottom-1 surface-border">
-                                    <span class="text-600 font-medium text-sm">Dimensions</span>
-                                    <span class="text-900 font-medium text-sm">2732x1690</span>
-                                </li>
-                                <li class="px-0 py-2 flex justify-content-between align-items-center">
-                                    <span class="text-600 font-medium text-sm">Resolution</span>
-                                    <span class="text-900 font-medium text-sm">144x144</span>
-                                </li>
-                            </ul> -->
+                        </div>
+                    
+                        <div class="col-12 md:col-6 lg:col-3 pl-0">
+                            <div class="flex align-items-start">
+                                <div>
+                                    <span class="flex align-items-center justify-content-center surface-100 border-round mr-3" style="height: 3rem; width: 3rem; background-color: #522888 !important"><i class="pi pi-inbox text-900 text-4xl" style="color: #BF9553 !important;"></i></span>
+                                </div>
+                                <div>
+                                    <span class="text-xl text-900 mb-2 font-medium" style="color: #754D9D !important;">Email</span>
+                                    <p class="text-700 line-height-3" style="color: #B97F24 !important;">{{'info@learnsoft.com'}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 md:col-6 xl:col-3 p-3">
-                        <div class="surface-card shadow-2 border-round p-3" style="border-radius: 6px;">
-                            <img src="assets/demo/images/landing/NPSnap.jpg" width="200" height="223" class="mb-3 w-full">
-                            <div class="flex justify-content-between align-items-start">
-                                <div>
-                                    <div class="text-xl font-medium text-900 mb-2" style="color: #522888 !important;">Mr. Neelesh Pandey</div>
-                                    <p class="mt-0 mb-3 text-600">Experienced Project Management & Product Strategy Leader | PMP® & Six Sigma Black Belt</p>
+                    <div class="col-12 md:col-6" >
+                        
+                        <form *ngIf="enquireForm" [formGroup]="enquireForm" (ngSubmit)="submitForm()">
+                            <div class="p-fluid formgrid grid px-4 md:px-6 lg:px-4">
+                                <div class="field col-12 mb-4">
+                                    <input type="text" pInputText placeholder="Name"  [formControl]="name"/>
+                                    <small *ngIf="enquireForm.controls.name.status === 'INVALID' && enquireForm.controls.name.dirty">Name Required</small>
                                 </div>
                                
+                                <div class="field col-12 mb-4">
+                                    <input type="text" pInputText placeholder="Email" [formControl]="email"/>
+                                    <small *ngIf="enquireForm.controls.email.status === 'INVALID' && enquireForm.controls.email.dirty">Please enter a valid email</small>
+                                </div>
+                                <div class="field col-12 mb-4">
+                                    <p-inputMask mask="9999999999" placeholder="Phone Number" [formControl]="phoneNumber"></p-inputMask>
+                                    <small *ngIf="enquireForm.controls.phoneNumber.status === 'INVALID' && enquireForm.controls.phoneNumber.dirty">Phone Number Required</small>
+                                </div>
+                                <div class="field col-12 mb-4">
+                                    <textarea pKeyFilter="int" rows="5" cols="30" pInputTextarea placeholder="Message" [formControl]="message"></textarea>
+                                </div>
+                               
+                                <div class="col-12">
+                                    <button pbutton="" pripple="" [disabled]="!enquireForm.dirty || enquireForm.status === 'INVALID' || disableForm" label="Send Message" icon="pi pi-send" class="p-element p-ripple w-auto p-button p-component" style="background-color: #522888 !important; color: white !important">
+                                        <span class="p-button-icon p-button-icon-left pi pi-send" aria-hidden="true"></span>
+                                        <span class="p-button-label">Send Message</span>
+                                        <span class="p-ink"></span>
+                                    </button>
+                                </div>
                             </div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="grid surface-card shadow-2 mt-5" style="border-radius: 10px;">
-                    <div class="col-12 md:col-3 px-5 py-5">
-                        <i class="pi pi-clock text-4xl text-yellow-600 mb-3"></i>
-                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">45,000+</div>
-                        <p class="text-700 m-0" style="color: #B97F24 !important;">Hours of Training Delivered.</p>
-                    </div>
-                    <div class="col-12 md:col-3 px-5 py-5">
-                        <i class="pi pi-file text-4xl text-yellow-600 mb-3"></i>
-                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">100+</div>
-                        <p class="text-700 m-0" style="color: #B97F24 !important;">Global Projects Managed.</p>
-                    </div>
-                    <div class="col-12 md:col-3 px-5 py-5">
-                        <i class="pi pi-book text-4xl text-yellow-600 mb-3"></i>
-                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">20+</div>
-                        <p class="text-700 m-0" style="color: #B97F24 !important;">Books Authored.</p>
-                    </div>
-                    <div class="col-12 md:col-3 px-5 py-5">
-                        <svg _ngcontent-ng-c724430211="" fill="transparent" stroke="#c79807" stroke-width="1" width="40px" height="38px" viewBox="-1 0 19 17" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><path _ngcontent-ng-c724430211="" d="M16.141 7.905c.24.102.24.269 0 .37l-7.204 3.058a1.288 1.288 0 0 1-.874 0L.859 8.276c-.24-.102-.24-.27 0-.371l7.204-3.058a1.287 1.287 0 0 1 .874 0zm-6.833 4.303 3.983-1.69v2.081c0 1.394-2.145 2.524-4.791 2.524s-4.79-1.13-4.79-2.524v-2.082l3.982 1.69a2.226 2.226 0 0 0 1.616 0zm4.94 1.677h1.642v-1.091a.822.822 0 1 0-1.643 0zm.82-3.603a.554.554 0 1 0-.553-.554.554.554 0 0 0 .554.554zm0 1.415a.554.554 0 1 0-.553-.555.554.554 0 0 0 .554.555z"></path></svg>
-                        <div class="text-900 font-bold text-4xl mb-3 line-height-3" style="color: #522888 !important;">4</div>
-                        <p class="text-700 m-0" style="color: #B97F24 !important;">Honarary Doctorates</p>
+                        </form>
                     </div>
                 </div>
-        </div>
+            </div>     
+            </div>
+            
+        </ng-container>
+        <app-services [class]="tab === 4 ? '': 'hidden'"></app-services>
         
-        <div class="surface-section px-4 py-8 md:px-6 lg:px-8" id="contact">
-            <div class="grid"><div class="col-12 lg:col-6">
-                <div class="text-900 text-2xl font-bold mb-4" style="color: #522888 !important;">GET IN TOUCH</div>
-                <p class="text-700 text-xl line-height-3 pr-0 lg:pr-5" style="color: #B97F24 !important;">We’d love to hear from you! Whether you have a question, want to learn more about our courses, or need support, our team is here to help. Reach out to us through any of the following channels:</p>
-                <div class="col-12 md:col-6 lg:col-3 pl-0">
-                <div class="flex align-items-start">
-                    <div>
-                        <span class="flex align-items-center justify-content-center surface-100 border-round mr-3" style="height: 3rem; width: 3rem; background-color: #522888 !important"><i class="pi pi-phone text-900 text-4xl" style="color: #BF9553 !important;"></i></span>
-                    </div>
-                    <div>
-                        <span class="text-xl text-900 mb-2 font-medium" style="color: #754D9D !important;">Phone</span>
-                        <p class="text-700 line-height-3" style="color: #B97F24 !important;">+919840781198</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 md:col-6 lg:col-3 pl-0">
-                <div class="flex align-items-start">
-                    <div>
-                        <span class="flex align-items-center justify-content-center surface-100 border-round mr-3" style="height: 3rem; width: 3rem; background-color: #522888 !important"><i class="pi pi-inbox text-900 text-4xl" style="color: #BF9553 !important;"></i></span>
-                    </div>
-                    <div>
-                        <span class="text-xl text-900 mb-2 font-medium" style="color: #754D9D !important;">Email</span>
-                        <p class="text-700 line-height-3" style="color: #B97F24 !important;">{{'info@learnsoft.com'}}</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="col-12 md:col-6" >
-                
-                <form *ngIf="enquireForm" [formGroup]="enquireForm" (ngSubmit)="submitForm()">
-                    <div class="p-fluid formgrid grid px-4 md:px-6 lg:px-4">
-                        <div class="field col-12 mb-4">
-                            <input type="text" pInputText placeholder="Name"  [formControl]="name"/>
-                            <small *ngIf="enquireForm.controls.name.status === 'INVALID' && enquireForm.controls.name.dirty">Name Required</small>
-                        </div>
-                       
-                        <div class="field col-12 mb-4">
-                            <input type="text" pInputText placeholder="Email" [formControl]="email"/>
-                            <small *ngIf="enquireForm.controls.email.status === 'INVALID' && enquireForm.controls.email.dirty">Please enter a valid email</small>
-                        </div>
-                        <div class="field col-12 mb-4">
-                            <p-inputMask mask="9999999999" placeholder="Phone Number" [formControl]="phoneNumber"></p-inputMask>
-                            <small *ngIf="enquireForm.controls.phoneNumber.status === 'INVALID' && enquireForm.controls.phoneNumber.dirty">Phone Number Required</small>
-                        </div>
-                        <div class="field col-12 mb-4">
-                            <textarea pKeyFilter="int" rows="5" cols="30" pInputTextarea placeholder="Message" [formControl]="message"></textarea>
-                        </div>
-                       
-                        <div class="col-12">
-                            <button pbutton="" pripple="" [disabled]="!enquireForm.dirty || enquireForm.status === 'INVALID' || disableForm" label="Send Message" icon="pi pi-send" class="p-element p-ripple w-auto p-button p-component" style="background-color: #522888 !important; color: white !important">
-                                <span class="p-button-icon p-button-icon-left pi pi-send" aria-hidden="true"></span>
-                                <span class="p-button-label">Send Message</span>
-                                <span class="p-ink"></span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            
-        </div>
-    </div>
+        
+       
+       
+        
+        
+        
+        
         <div class="block-content">
             <div class="ng-star-inserted">
                 <div class="grid grid-nogutter surface-section px-4 py-4 md:px-6 lg:px-8 border-top-1 surface-border" style="background-image: url('assets/demo/images/landing/footer-bg-1.png');background-color: #eeeeee !important;">
                     <div class="col-12 lg:col-6 lg:border-right-1 surface-border">
-                        <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="LCT Logo" height="55" class="w-20rem" style="margin-left: -50px;">
+                        <img src="assets/demo/images/landing/learn-logo.png" alt="Learnsoft Logo" height="70" >
+                        <span class="text-900 block mt-2 mr-3" style="color: #522888 !important;">Build the skills that take you further than you ever imagined</span>
                         <span class="text-500 block mt-4">Copyright © {{currentYear}} LearnSoft</span>
                     </div>
                     <div class="col-12 md:col-6 lg:col-2 mt-4 lg:mt-0 lg:pl-4 flex flex-column">
@@ -624,248 +405,4 @@
         </div>
     </div>
     <p-scrollTop />
-    <p-dialog header="Training" [(visible)]="visibleCourse" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleCourse = false; tabNumber = 0;">
-        <p-tabView class="responsive-tab-view ml-2 hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
-            <p-tabPanel header="PMI-PMP"></p-tabPanel>
-            <p-tabPanel header="CAPM"></p-tabPanel>
-            <p-tabPanel header="Six Sigma"></p-tabPanel>
-        </p-tabView>
-        <div class="surface-section mt-4" *ngIf="tabNumber === 0">
-            <div class="text-500 mb-5">Prepare for the PMP certification with our comprehensive course, designed to equip you with the essential skills, knowledge, and strategies to successfully manage projects and lead teams.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">35 Hour PMP® Training</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="PMI-PMP® Exam Preparation" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Practice Exams" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Mock Tests" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Certificate of Completion" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
-                        
-                    </div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a>
-                    </div>
-                </li>
-                
-            </ul>
-        </div>
-        <div class="surface-section mt-4" *ngIf="tabNumber === 1">
-            <div class="text-500 mb-5">Prepare for the CAPM certification with our comprehensive, self-paced online course, designed to give you the foundational project management knowledge needed to advance your career.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">23 Hour CAPM® Training</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="CAPM® Exam Preparation" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Practice Exams" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Mock Tests" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Certificate of Completion" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
-                        
-                    </div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
-                </li>
-                
-            </ul>
-        </div>
-       
-        <div class="surface-section mt-4" *ngIf="tabNumber === 2">
-            <div class="text-500 mb-5">Master the art of process improvement with our Six Sigma certification course, designed to equip you with the tools and methodologies to drive efficiency and quality in any organization.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Six Sigma Green Belt & Black Belt</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="Study Materials" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Real-World Case Studies" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Hands-On Exercises" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Certificate of Completion" class="mr-2 mb-2"></p-chip>                        
-                    </div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
-                </li>
-                
-            </ul>
-        </div>
-    </p-dialog>
-
-    <p-dialog header="Certificates" [(visible)]="visibleCert" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleCert = false; tabNumber = 0;">
-        <p-tabView class="responsive-tab-view ml-2 hidden lg:flex" [(activeIndex)]="tabNumber" [scrollable]="true">
-            <p-tabPanel header="Business Analysis"></p-tabPanel>
-            <p-tabPanel header="Project Management"></p-tabPanel>
-            <p-tabPanel header="Design Thinking"></p-tabPanel>
-        </p-tabView>
-        <div class="surface-section mt-4" *ngIf="tabNumber === 0">
-            <div class="text-500 mb-5">Gain the skills to effectively analyze business needs, drive solutions, and deliver value with our comprehensive Business Analysis certification course, designed to elevate your career and decision-making abilities.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Business Analysis</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="Hands-on Projects" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Access to Case Studies" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Guided Exercises" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
-                        
-                    </div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
-                </li>
-                
-            </ul>
-        </div> 
-        <div class="surface-section mt-4" *ngIf="tabNumber === 2">
-            <div class="text-500 mb-5">Unlock your creative potential with our online Design Thinking course, designed to help you solve complex problems through innovative, user-centered solutions.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Design Thinking</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="Sustainable Entrepreneurship and Innovation Training" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Access to Case Studies" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Guided Exercises" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Interactive Video Lessons" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="No Prior Experience Required" class="mr-2 mb-2"></p-chip>
-                        
-                    </div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
-                </li>
-                
-            </ul>
-        </div>
-        <div class="surface-section mt-4" *ngIf="tabNumber === 1">
-            <div class="text-500 mb-5">Equip yourself with the essential skills to lead successful projects with our comprehensive Project Management certification course, designed to prepare you for real-world challenges and industry-recognized credentials.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Project Management</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="Project Management Orientation" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Knowledge Area Focused Training" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Hands-on Projects" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Study Materials and Downloadable Resources" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Guided Exercises" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Post-Course Support and Mentorship" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Hands-On Experience with Project Management Tools" class="mr-2 mb-2"></p-chip>
-                        
-                    </div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Trainers</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Dr.V.K.Garg, Dr.Yatin Bhatia</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
-                </li>
-                
-            </ul>
-        </div>
-    </p-dialog>
-    <p-dialog header="Webinars & Workshops" [(visible)]="visibleWorkshop" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false" (onHide)="visibleWorkshop = false; tabNumber = 0;">
-        <div class="surface-section mt-4">
-            <div class="text-500 mb-5">Engage in interactive, expert-led live workshops and webinars, designed to provide practical insights, industry trends, and hands-on learning for immediate application in your professional projects.</div>
-            <ul class="list-none p-0 m-0">
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Course</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">Project Management</div>
-                    
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">What we offer</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">
-                        <p-chip label="Live, Interactive Sessions" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Hands-On Activities" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Exclusive Q&A with Trainers" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="atest Tools, Techniques, and Trends" class="mr-2 mb-2"></p-chip>
-                        <p-chip label="Certificate of Participation" class="mr-2 mb-2"></p-chip>
-                    </div>
-                </li>
-               
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Location</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">-</div>
-                </li>
-                <li class="flex align-items-center py-3 px-2 border-top-1 surface-border flex-wrap">
-                    <div class="text-500 w-6 md:w-2 font-medium">Pricing</div>
-                    <div class="text-900 w-full md:w-8 md:flex-order-0 flex-order-1">For pricing information contact - <a href="mailto:info@learnsoft.com">{{'info@learnsoft.com'}}</a></div>
-                </li>
-                
-            </ul>
-        </div>
-    </p-dialog>
 </div>
